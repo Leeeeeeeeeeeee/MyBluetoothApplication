@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyBluetoothApplication</string>
+    <!--bluetooth-->
+    <string name="bt_scan_success">正在扫描蓝牙</string>
+    <string name="bt_scan_fail">扫描蓝牙失败</string>
+    <string name="bt_scan_none">未搜索到蓝牙设备</string>
+    <string name="bt_pairing">正在配对中...</string>
+    <string name="bt_pair_fail">蓝牙配对失败</string>
+    <string name="bt_connect_start">点击开始蓝牙连接</string>
+    <string name="bt_connect_auto">正在自动连接中...</string>
+    <string name="bt_connecting">正在连接中...</string>
+    <string name="bt_connect_fail">蓝牙连接失败</string>
+    <string name="bt_disconnect">蓝牙断开连接</string>
+    <string name="bt_lost">蓝牙信号丢失</string>
+    <string name="bt_fail">蓝牙连接失败</string>
+    <string name="bt_tips_reconnect">该设备类型已连接，是否断开以重新连接新设备%s?</string>
+</resources>
