@@ -14,4 +14,5 @@
     <string name="bt_lost">蓝牙信号丢失</string>
     <string name="bt_fail">蓝牙连接失败</string>
     <string name="bt_tips_reconnect">该设备类型已连接，是否断开以重新连接新设备%s?</string>
+    <string name="send">发送数据</string>
 </resources>

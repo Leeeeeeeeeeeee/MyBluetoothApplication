@@ -7,25 +7,62 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_scan"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="搜索蓝牙"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/theme_blue"
+        app:titleTextColor="@color/white" />
 
-    <ScrollView
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scrollbars="vertical">
+        android:background="#eeeeee" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_add"
+            app:tabMode="scrollable" />
+
 
         <TextView
-            android:id="@+id/tv_msg_receive"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:autoSizeTextType="uniform"
+            android:background="@color/theme_blue"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="+ 添加设备"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/tab_layout"
+            app:layout_constraintRight_toLeftOf="@id/tv_delete" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:autoSizeTextType="uniform"
+            android:background="@color/theme_pink"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="- 删除设备"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/tv_add"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>
